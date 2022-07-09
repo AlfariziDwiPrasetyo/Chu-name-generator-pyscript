@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+    <link rel="stylesheet" href="wengdev.css">
+  </head>
+  <body>
+
+
+        <div id="particles-js"></div>
+        <h2>CHUUNIBYOU NAME GENERATOR</h2>
+          <h1 id = 'output'></h1>
+          <br>
+          <button id="run" type="button" class="button is-link" pys-onClick="generate">Generate</button>
+
+
+
+    <py-script>
+    import secrets as r 
+
+    name1 = "dark white blood king ryuu killer black ulquiorra bloody skywalker lighting kuro shiro queen master big saint death divine lord hearthfilia Dragneel Raven golden domino redder yylfordt arturo nnoitora jjaegerjaquez enrico blackmore risotto donatello yoshikage adolf wolfgang sternritter genryusai starrk wonderweiss vandenreich aurora scarlet lockser vermillion fecht flare fullbuster narancia moody the giorno silver lorade quazar doomsday nightfall fallen psycho outlaw almighty god super lingering prime queedatum giga voider biferin gargantua jodernlyui fresct ioasin kjerrag vouvirre victoria phantom shawlong aislingger shining deep Dondarrion yuriarna assassin "
+    nameUpperCase = name1.upper()
+    nameR = nameUpperCase.split(" ")
+
+    name2 = "Aelfric Ailwyn Aktaion Alberic Alstin Biwenys Brackwell Byrant Cartwell Charcraes Crowlin Daewynn Elrand Hamell Heleqirelle HentevarI ilIshton Jarvori lJimmer Krismys Kyllan Lindir Olaqen Presphine Richenas Richtevar Syltumil Teague Terlaern Theoden Torgeiros Ulajyre Yelkrana yhwach acnologia brando joestar valentine hartman redfox sherria eucliffe mikazuchi abacchio speedwagon sabbath lark ash vermeill mirazer zyphon nhifoghr drathal narith ninefingers lorion lidocruz szayelaporro"
+    nameUpperCase2 = name2.upper()
+    nameR2 = nameUpperCase2.split(" ")
+
+    op = Element("output")
+    def random():
+        asli1 = r.choice(nameR)
+        asli2 = r.choice(nameR2)
+        return f"{asli1} {asli2}"
+
+    def generate(*args, **kwargs):
+        op.write(random())
+
+    </py-script>
+    <script src=
+    "/chuNameGenerator/particles.js">
+    </script>
+    <script src=
+    "/chuNameGenerator/app.js">
+    </script>
+  
+  </body>
+</html>
